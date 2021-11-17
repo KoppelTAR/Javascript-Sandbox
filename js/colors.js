@@ -6,6 +6,12 @@ const colors = ['red', 'green','blue','yellow']
 //console.log(myButton);
 var count;
 
+// template lierals
+let name = 'Kaspar Koppel';
+
+console.log(`Hello, ${name}`);
+
+
 myButton.addEventListener('click', changeColor)
 
 function changeColor(){
@@ -23,16 +29,21 @@ function changeColor(){
         if (rnd2 == count) {
             if (rnd > 1 || rnd < 2) {
                 myBox.style.backgroundColor = colors[rnd2+1];
+                console.log(count);
+                console.log(rnd);
+                console.log('random greater 1 or smaller than 2');
             }
             else {
                 myBox.style.backgroundColor = colors[rnd2-1];
+                console.log(count);
+                console.log(rnd);
             }
         } 
         else {
             myBox.style.backgroundColor = colors[rnd2];
             console.log(count);
             console.log(rnd);
-            console.log('test');
+            console.log('used second random');
             count = rnd2   
         }
     }
